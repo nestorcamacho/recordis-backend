@@ -1,0 +1,31 @@
+{
+  "development": {
+    "username": "admin_recordis_db",
+    "password": "1234",
+    "database": "recordis_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "mailer": {
+      "service": "gmail",
+      "user": "ncamdelu@gmail.com",
+      "pass": "8y119nno2gm"
+    },
+    "jwt": {
+      "secretOrKey": "tasmanianDevil"
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
