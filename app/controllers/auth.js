@@ -23,10 +23,9 @@ module.exports = {
             }
 
             const validateEmailToken = uuid();
-            const createdUser = await models.users.create(
-                    {name, lastName, email, password, validateEmailToken, roles: [{code: "USER"}]},
-                    {include: [roles]}
-                );
+            const createdUser = await models.users.create({name, lastName, email, password, validateEmailToken});
+            const userRole = await models.roles.findOne({where: {code: "USER"}});
+            createdUser.addRoles([userRole]);
 
             const templateValues = {
                 name: createdUser.name,

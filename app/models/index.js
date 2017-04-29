@@ -31,8 +31,8 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 //TODO relations
-db.roles.belongsTo(db.users);
-db.users.hasMany(db.roles);
+db.users.belongsToMany(db.roles, { as: 'Roles', through: { model: db.usersRoles, unique: false }, foreignKey: 'userId' });
+db.roles.belongsToMany(db.users, { as: 'users', through: { model: db.usersRoles, unique: false }, foreignKey: 'roleId' });
 
 //TODO initialize
 sequelize.sync({force: true}).then(() => {
