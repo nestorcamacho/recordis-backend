@@ -1,5 +1,5 @@
 const config = require("./config.js");
-const models  = require("../app/models");
+const models  = require("../models");
 
 module.exports = function(passport, passportJWT) {
     const ExtractJwt = passportJWT.ExtractJwt;

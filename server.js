@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 const passport = require('passport');
 const passportJWT = require("passport-jwt");
-require('./config/passport')(passport, passportJWT);
+require('./app/config/passport')(passport, passportJWT);
 
 const routes = require('./app/routes');
 

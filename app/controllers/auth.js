@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const uuid = require("uuid/v4");
 const moment = require("moment");
 const mailer = require("../services/mailer.js");
-const config = require("../../config/config.js");
+const config = require("../config/config.js");
 
 module.exports = {
     signup: async(req, res, next) => {
